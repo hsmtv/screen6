@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMTV</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #000;
+      position: relative;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* ba cột */
+      grid-template-rows: repeat(4, 1fr);  /* bon hàng */
+      width: 100%;
+      height: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0.1px solid gray;
+	  
+    }
+    #startButton {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000; /* Đảm bảo nút ở trên cùng */
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgba(0, 123, 255, 0.8);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #startButton:hover {
+      background-color: rgba(0, 86, 179, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <button id="startButton">Play</button>
+  <div class="container">
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+	<iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+	<iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+	<iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe         
+        src="https://www.youtube.com/embed/Q7M02A2-m5I?enablejsapi=1" 
+        title="SMTV: Forty Quadrillion Screens" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    document.getElementById('startButton').addEventListener('click', function() {
+      const iframes = document.querySelectorAll('iframe');
+      
+      iframes.forEach(iframe => {
+        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      });
+    });
+  </script>
+</body>
+</html>
